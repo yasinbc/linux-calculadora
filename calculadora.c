@@ -44,36 +44,12 @@ int main(void){
     
         switch(opcion){
             case 's':
-                bool pregunta_b = true;
-                do{
-                    printf("Funcion sumar\n\n");
-                    limpiar_buffer();
-                    printf("Introduce valores para sumar\n");
-                    scanf("%i", &valor1_i);
-                }while (pregunta_b);
-                
-
-                
-
                 printf("Funcion sumar\n\n");
                 limpiar_buffer();
                 printf("Introduce 2 valores para sumar\n");
                 scanf("%i", &valor1_i);
                 scanf("%i", &valor2_i);
                 printf("%i + %i = %i\n", valor1_i, valor2_i, sumar(valor1_i, valor2_i));
-
-                /*while(pregunta_b){
-                    char respuesta_c;
-                    printf("Seguir sumando? (s/n)\n");
-                    respuesta_c = getchar();
-                    
-                    if(respuesta_c == 's'){
-                        pregunta_b = false;
-                    }
-
-                    limpiar_buffer();
-                }*/
-
                 break;
             case 'r':
                 printf("Funcion restar\n\n");
