@@ -18,10 +18,13 @@ void limpiar_buffer(){
 int main(void){
     char opcion;
     bool bucle_menu;
-    int valor1, valor2;
-    
-    valor1 = 0;
-    valor2 = 0;
+    int valor1_i, valor2_i;
+    float valor1_f, valor2_f;
+        
+    valor1_i = 0;
+    valor2_i = 0;
+    valor1_f = 0;
+    valor2_f = 0;
     bucle_menu = true;
     
 
@@ -41,36 +44,60 @@ int main(void){
     
         switch(opcion){
             case 's':
+                bool pregunta_b = true;
+                do{
+                    printf("Funcion sumar\n\n");
+                    limpiar_buffer();
+                    printf("Introduce valores para sumar\n");
+                    scanf("%i", &valor1_i);
+                }while (pregunta_b);
+                
+
+                
+
                 printf("Funcion sumar\n\n");
                 limpiar_buffer();
                 printf("Introduce 2 valores para sumar\n");
-                scanf("%i", &valor1);
-                scanf("%i", &valor2);
-                printf("%i + %i = %i", valor1, valor2, sumar(valor1, valor2));
+                scanf("%i", &valor1_i);
+                scanf("%i", &valor2_i);
+                printf("%i + %i = %i\n", valor1_i, valor2_i, sumar(valor1_i, valor2_i));
+
+                /*while(pregunta_b){
+                    char respuesta_c;
+                    printf("Seguir sumando? (s/n)\n");
+                    respuesta_c = getchar();
+                    
+                    if(respuesta_c == 's'){
+                        pregunta_b = false;
+                    }
+
+                    limpiar_buffer();
+                }*/
+
                 break;
             case 'r':
                 printf("Funcion restar\n\n");
                 limpiar_buffer();
                 printf("Introduce 2 valores para restar\n");
-                scanf("%i", &valor1);
-                scanf("%i", &valor2);
-                printf("%i - %i = %i", valor1, valor2, restar(valor1, valor2));
+                scanf("%i", &valor1_i);
+                scanf("%i", &valor2_i);
+                printf("%i - %i = %i", valor1_i, valor2_i, restar(valor1_i, valor2_i));
                 break;
             case 'm':
                 printf("Funcion multiplicar\n\n");
                 limpiar_buffer();
                 printf("Introduce 2 valores para multiplicar\n");
-                scanf("%i", &valor1);
-                scanf("%i", &valor2);
-                printf("%i * %i = %i", valor1, valor2, multiplicar(valor1, valor2));
+                scanf("%i", &valor1_i);
+                scanf("%i", &valor2_i);
+                printf("%i * %i = %i", valor1_i, valor2_i, multiplicar(valor1_i, valor2_i));
                 break;
             case 'd':
                 printf("Funcion dividir\n\n");
                 limpiar_buffer();
                 printf("Introduce 2 valores para dividir\n");
-                scanf("%f", &valor1);
-                scanf("%f", &valor2);
-                printf("%f / %f = %f", valor1, valor2, dividir(valor1, valor2));
+                scanf("%f", &valor1_f);
+                scanf("%f", &valor2_f);
+                printf("%f / %f = %f", valor1_f, valor2_f, dividir(valor1_f, valor2_f));
                 break;
             case 'S':
                 printf("Hasta la proxima\n\n");

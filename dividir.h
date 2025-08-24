@@ -1,6 +1,6 @@
 #ifndef DIVIDIR_H_
 #define DIVIDIR_H_
 
-float dividir(int valor1, int valor2);
+float dividir(float valor1, float valor2);
 
 #endif
